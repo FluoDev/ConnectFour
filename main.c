@@ -1,11 +1,8 @@
 #include <stdio.h>
 
 char grid[6][7];
-int playerTurn = 1;
 int directions[8][2] = {{-1, -1}, {-1, 1}, {1, -1}, {1, 1},\
   {-1, 0}, {0, 1}, {1, 0}, {0, -1}};
-_Bool ended = 0;
-int winner = 0;
 
 void initGrid(void)
 {
@@ -86,6 +83,10 @@ int checkWin(void)
 
 int main(void)
 {
+  _Bool ended = 0;
+  int winner = 0;
+  int playerTurn = 1;
+
   initGrid();
 
   while (!ended)
